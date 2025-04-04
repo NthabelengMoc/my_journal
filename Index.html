@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Journal</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Personal Journal</h1>
+            <p class="date-display" id="currentDate"></p>
+        </header>
+
+        <main>
+            <section class="entry-form">
+                <h2>New Entry</h2>
+                <form id="journalForm">
+                    <div class="form-group">
+                        <label for="entryTitle">Title:</label>
+                        <input type="text" id="entryTitle" placeholder="Entry title..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="entryContent">Content:</label>
+                        <textarea id="entryContent" placeholder="Write your thoughts here..." rows="6" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="entryMood">Mood:</label>
+                        <select id="entryMood">
+                            <option value="happy">Happy</option>
+                            <option value="reflective">Reflective</option>
+                            <option value="motivated">Motivated</option>
+                            <option value="calm">Calm</option>
+                            <option value="sad">Sad</option>
+                            <option value="anxious">Anxious</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Save Entry</button>
+                </form>
+            </section>
+
+            <section class="entries">
+                <h2>Previous Entries</h2>
+                <div class="entries-filter">
+                    <label for="filterMood">Filter by mood:</label>
+                    <select id="filterMood">
+                        <option value="all">All moods</option>
+                        <option value="happy">Happy</option>
+                        <option value="reflective">Reflective</option>
+                        <option value="motivated">Motivated</option>
+                        <option value="calm">Calm</option>
+                        <option value="sad">Sad</option>
+                        <option value="anxious">Anxious</option>
+                    </select>
+                </div>
+                <div id="entriesList" class="entries-list">
+                    <!-- Journal entries will be added here by JavaScript -->
+                    <p class="empty-state">No entries yet. Write your first journal entry above!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 My Personal Journal</p>
+        </footer>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>

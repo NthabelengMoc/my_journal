@@ -1,0 +1,423 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: url(pexels-jessbaileydesign-1097930.jpg) ;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 700;   
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    
+}
+
+.date-display {
+    font-style: italic;
+    color: #7f8c8d;
+    &:hover{
+        color: #3498db;
+        text-decoration: underline;
+
+    }
+}
+
+/* Main Content Styles */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+section {
+    background-color:#fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* Entries Styles */
+.entries-filter {
+    margin-bottom: 20px;
+}
+
+.entries-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.entry-card {
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.entry-title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.entry-date {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.entry-content {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.entry-mood {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.empty-state {
+    color: #7f8c8d;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Mood Colors */
+.mood-happy {
+    border-left-color: #2ecc71;
+}
+
+.mood-reflective {
+    border-left-color: #9b59b6;
+}
+
+.mood-motivated {
+    border-left-color: #f39c12;
+}
+
+.mood-calm {
+    border-left-color: #3498db;
+}
+
+.mood-sad {
+    border-left-color: #95a5a6;
+}
+
+.mood-anxious {
+    border-left-color: #e74c3c;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    color: #7f8c8d;
+}
+
+/* Button to delete entry */
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.date-display {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* Main Content Styles */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* Entries Styles */
+.entries-filter {
+    margin-bottom: 20px;
+}
+
+.entries-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.entry-card {
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.entry-title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.entry-date {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.entry-content {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.entry-mood {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.empty-state {
+    color: #7f8c8d;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Mood Colors */
+.mood-happy {
+    border-left-color: #2ecc71;
+}
+
+.mood-reflective {
+    border-left-color: #9b59b6;
+}
+
+.mood-motivated {
+    border-left-color: #f39c12;
+}
+
+.mood-calm {
+    border-left-color: #3498db;
+}
+
+.mood-sad {
+    border-left-color: #95a5a6;
+}
+
+.mood-anxious {
+    border-left-color: #e74c3c;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    color: #7f8c8d;
+}
+
+/* Button to delete entry */
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
