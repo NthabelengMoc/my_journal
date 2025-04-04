@@ -54,7 +54,7 @@ header h1 {
     }
 }
 
-/* Main Content Styles */
+/* Main Content Styles */ 
 main {
     display: grid;
     grid-template-columns: 1fr;
